@@ -1,0 +1,37 @@
+.App {
+	text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+	animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.calendar-header {
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.month-change-container {
+	flex-basis: 10%;
+}
+.month-heading-container {
+	flex-basis: 80%;
+}
+
+.month-change-button {
+	border: none;
+	width: 100%;
+	background-color: transparent;
+	font-size: 2em;
+	color: lightgrey;
+}
+
+.App-link {
+	color: #61dafb;
+}
