@@ -1,20 +1,37 @@
 .App {
 	text-align: center;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-	animation: App-logo-spin infinite 20s linear;
-	}
+.calendar-container {
+	display: flex;
+	flex-direction: column;
+
+	flex-basis: 75%;
 }
 
 .calendar-header {
-	height: 10vh;
+	flex-basis: 7.5vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
+}
+
+.weekdays-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-basis: 2.5vh;
+}
+
+.weekday-single {
+	flex-basis: 12%;
+	flex-grow: 1;
+	font-size: 1.2em;
 }
 
 .month-change-container {
@@ -34,4 +51,9 @@
 
 .App-link {
 	color: #61dafb;
+}
+
+.todo-container {
+	flex-basis: 25%;
+	background-color: lightgrey;
 }

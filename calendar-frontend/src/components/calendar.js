@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CalendarHeader from "./calendar-header";
+import WeekdayHeader from "./weekday-header";
 
 export default function Calendar() {
 	let [currentMonth, setMonth] = useState(6);
@@ -23,6 +24,9 @@ export default function Calendar() {
 	}
 
 	return (
-		<CalendarHeader month={currentMonth} year={currentYear} prevMonth={prevMonth} nextMonth={nextMonth}></CalendarHeader>
+		<div className="calendar-container">
+			<CalendarHeader month={currentMonth} year={currentYear} prevMonth={prevMonth} nextMonth={nextMonth}></CalendarHeader>
+			<WeekdayHeader></WeekdayHeader>
+		</div>
 	)
 }
