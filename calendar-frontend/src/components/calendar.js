@@ -1,32 +1,37 @@
 import { useState } from "react";
 import CalendarHeader from "./calendar-header";
 import WeekdayHeader from "./weekday-header";
+import CalendarGrid from "./calendar-grid";
 
 export default function Calendar() {
-	let [currentMonth, setMonth] = useState(6);
-	let [currentYear, setYear] = useState(2023);
+	let [currentDate, setDate] = useState(new Date());
 	
 	let prevMonth = () => {
-		let newMonth = currentMonth - 1;
+		let newDate = new Date(currentDate);
+		let newMonth = currentDate.getMonth() - 1;
 		if (newMonth < 0) {
 			newMonth += 12;
-			setYear(currentYear - 1);
+			newDate.setFullYear(currentDate.getFullYear() - 1);
 		}
-		setMonth(newMonth);
+		newDate.setMonth(newMonth);
+		setDate(newDate);
 	}
 	let nextMonth = () => {
-		let newMonth = currentMonth + 1;
+		let newDate = new Date(currentDate);
+		let newMonth = currentDate.getMonth() + 1;
 		if (newMonth > 11) {
 			newMonth -= 12;
-			setYear(currentYear + 1);
+			newDate.setFullYear(currentDate.getFullYear() + 1);
 		}
-		setMonth(newMonth);
+		newDate.setMonth(newMonth);
+		setDate(newDate);
 	}
 
 	return (
 		<div className="calendar-container">
-			<CalendarHeader month={currentMonth} year={currentYear} prevMonth={prevMonth} nextMonth={nextMonth}></CalendarHeader>
+			<CalendarHeader date={currentDate} prevMonth={prevMonth} nextMonth={nextMonth}></CalendarHeader>
 			<WeekdayHeader></WeekdayHeader>
+			<CalendarGrid date={currentDate}></CalendarGrid>
 		</div>
 	)
 }

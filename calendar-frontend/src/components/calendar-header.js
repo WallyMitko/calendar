@@ -7,20 +7,20 @@ export default function CalendarHeader(props) {
 		<header className="calendar-header">
 			<div className="month-change-container">
 				<button className="month-change-button" onClick={props.prevMonth}>
-					<p>&#9664; {getPrevMonth(props.month)}</p>
+					<p>&#9664; {getPrevMonth(props.date.getMonth()).substring(0, 3)}</p>
 				</button>
 			</div>
 
 
 			<div className="month-heading-container">
 				<h1 className="month-heading">
-					{monthNames[props.month]} {props.year}
+					{monthNames[props.date.getMonth()]} {props.date.getFullYear()}
 				</h1>
 			</div>
 
 			<div className="month-change-container">
 				<button className="month-change-button" onClick={props.nextMonth}>
-					<p>{getNextMonth(props.month)} &#9654;</p>
+					<p>{getNextMonth(props.date.getMonth()).substring(0, 3)} &#9654;</p>
 				</button>
 			</div>
 		</header>

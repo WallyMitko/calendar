@@ -34,6 +34,37 @@
 	font-size: 1.2em;
 }
 
+.calendar-grid {
+	display: flex;
+	flex-direction: column;
+
+	flex-shrink: 0;
+	flex-grow: 1;
+}
+
+.calendar-week {
+	display: flex;
+	flex-direction: row;
+
+	flex-grow: 1;
+}
+
+.day {
+	flex-basis: 14%;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.weekday {
+	background-color: rgb(230, 230, 230);
+}
+.weekend {
+	background-color: lightgrey;
+}
+.dummy {
+	background-color: darkgrey;
+}
+
 .month-change-container {
 	flex-basis: 10%;
 }
