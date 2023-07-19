@@ -19,6 +19,7 @@
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
+	border-bottom: 1px solid lightgrey;
 }
 
 .weekdays-header {
@@ -32,6 +33,10 @@
 	flex-basis: 12%;
 	flex-grow: 1;
 	font-size: 1.2em;
+	border: 1px solid lightgrey;
+}
+.weekday-single:last-child {
+	border-right: none;
 }
 
 .calendar-grid {
@@ -54,15 +59,23 @@
 	flex-grow: 1;
 	flex-shrink: 0;
 }
-
 .weekday {
-	background-color: rgb(230, 230, 230);
+	background-color: white;
+	border: 1px solid lightgrey;
 }
 .weekend {
 	background-color: lightgrey;
+	border: 1px solid darkgrey;
 }
 .dummy {
-	background-color: darkgrey;
+	background-color: white;
+	border: 1px solid lightgrey;
+}
+.day-number {
+	text-align: left;
+	font-size: 1.6em;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 
 .month-change-container {
@@ -87,4 +100,5 @@
 .todo-container {
 	flex-basis: 25%;
 	background-color: lightgrey;
+	border-left: 1px solid black;
 }
