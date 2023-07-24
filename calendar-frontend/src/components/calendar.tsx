@@ -3,8 +3,8 @@ import CalendarHeader from "./calendar-header";
 import WeekdayHeader from "./weekday-header";
 import CalendarGrid from "./calendar-grid";
 
-export default function Calendar() {
-	let [currentDate, setDate] = useState(new Date());
+export default function Calendar(props: {date: Date}) {
+	let [currentDate, setDate] = useState(props.date);
 	
 	let prevMonth = () => {
 		let newDate = new Date(currentDate);

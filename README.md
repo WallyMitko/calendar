@@ -4,9 +4,9 @@ Full-stack calendar app using React, Node, Express, Postgres (intended for perso
 ### Current features
 - View this month's calendar
 - Go forward and backward to see other months
+- Go directly to a given month using URL parameters (/year or /year/month)
 
 ### In-progress features
-- Go to a specific month directly by URL
 
 ### Planned features
 - Add and view events 
