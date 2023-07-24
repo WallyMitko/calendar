@@ -1,6 +1,6 @@
 import {monthNames, getPrevMonth, getNextMonth} from "../utils/month-utils"
 
-export default function CalendarHeader(props) {
+export default function CalendarHeader(props: {date: Date, prevMonth: () => void, nextMonth: () => void}) {
 
 
 	return (

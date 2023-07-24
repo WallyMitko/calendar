@@ -1,6 +1,6 @@
 import CalendarDay from "./calendar-day";
 
-export default function CalendarWeek(props) {
+export default function CalendarWeek(props: {startDate: Date}) {
 	let dates = [];
 	let nullDayID = 696969;
 	for (let i = 0; i < 7; i++) {

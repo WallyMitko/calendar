@@ -1,7 +1,7 @@
 import CalendarWeek from "./calendar-week";
 import { getWeekStartDates } from "../utils/month-utils";
 
-export default function CalendarGrid(props) {
+export default function CalendarGrid(props: {date: Date}) {
 	let firstDay = new Date(props.date);
 	firstDay.setDate(1);
 	let weekStartDates = getWeekStartDates(firstDay);

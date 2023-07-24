@@ -1,4 +1,4 @@
-export default function WeekdayHeader(props) {
+export default function WeekdayHeader() {
 	return (
 		<div className="weekdays-header">
 			<div className="weekday-single">Sunday</div>

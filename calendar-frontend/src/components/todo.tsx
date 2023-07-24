@@ -1,4 +1,4 @@
-export default function Todo(props) {
+export default function Todo() {
 	return (
 		<div className="todo-container"></div>
 	)
