@@ -1,6 +1,7 @@
+import { EventInfo } from "../utils/connection-utils";
 import CalendarDay from "./calendar-day";
 
-export default function CalendarWeek(props: {startDate: Date}) {
+export default function CalendarWeek(props: {startDate: Date, events: EventInfo[]}) {
 	let dates = [];
 	let nullDayID = 696969;
 	for (let i = 0; i < 7; i++) {
@@ -15,7 +16,7 @@ export default function CalendarWeek(props: {startDate: Date}) {
 	}
 	
 	let days = dates.map(date => 
-		<CalendarDay key={date ? date.valueOf() : nullDayID++} date={date}></CalendarDay>
+		<CalendarDay key={date ? date.valueOf() : nullDayID++} date={date} events={props.events.filter(event => event.date.getDay() === date?.getDay())}></CalendarDay>
 	);
 
 	return (
