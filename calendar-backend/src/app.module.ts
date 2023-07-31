@@ -9,6 +9,7 @@ import { TodoEntry } from './entities/todo.entity';
 import { EventsModule } from './events/events.module';
 import { EventsService } from './events/events.service';
 import { EventsController } from './events/events.controller';
+import { UsersModule } from './users/users.module';
 
 @Module({
 	imports: [
@@ -22,7 +23,8 @@ import { EventsController } from './events/events.controller';
 			entities: [User, Calendar, CalendarEvent, TodoEntry],
 			synchronize: true
 		}),
-		EventsModule
+		EventsModule,
+		UsersModule
 	],
 	controllers: [AppController, EventsController],
 	providers: [AppService, EventsService],
